@@ -5,3 +5,12 @@
   <h1>Hello from GitHub Pages!</h1>
 </body>
 </html>
+
+<script>
+  fetch('data.json')
+    .then(r => r.json())
+    .then(j => {
+      document.body.insertAdjacentHTML('beforeend',
+        `<pre>${j.message}</pre>`);
+    });
+</script>
